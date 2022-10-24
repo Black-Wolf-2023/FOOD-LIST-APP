@@ -1,0 +1,12 @@
+ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.active-list{
+    color: lightcoral;
+}
