@@ -1,5 +1,6 @@
 import React from 'react'
 import ".././styles/Males.css";
+import { Fade } from 'react-reveal';
 
 export const Males = ({data}) => {
 
@@ -7,15 +8,17 @@ export const Males = ({data}) => {
       
       data.map(e => {
         return(
-          <div className='meals' key={e.id}>
-              <div className='card'>
-                  <img src={e.img}/>
-                  <div className='info'>
-                    <div className='name'>{e.name}</div>
-                    <div className='dis'>{e.dis}</div>
-                  </div>
-              </div>
-          </div>
+          <Fade bottom>
+            <div className='meals' key={e.id}>
+                <div className='card'>
+                    <img src={e.img}/>
+                    <div className='info'>
+                      <div className='name'>{e.name}</div>
+                      <div className='dis'>{e.dis}</div>
+                    </div>
+                </div>
+            </div>
+          </Fade>
         )
       })
       

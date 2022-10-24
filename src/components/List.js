@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import { Fade } from 'react-reveal';
 import ".././styles/List.css";
 import { LocalStorage } from './Main__Context';
 
@@ -19,13 +20,15 @@ export const List = () => {
   }
   return (
     <div className='list'>
-       <ul>
-         {List__data.data[1].map((e,index) => {
-            return(
-              <li key={index} onClick={data__updater}>{e}</li>
-            )
-         })}
-       </ul>
+      <Fade bottom>
+        <ul>
+          {List__data.data[1].map((e,index) => {
+              return(
+                <li key={index} onClick={data__updater}>{e}</li>
+              )
+          })}
+        </ul>
+      </Fade>
     </div>
   )
 }

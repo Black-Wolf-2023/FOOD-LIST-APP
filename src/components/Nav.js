@@ -16,7 +16,7 @@ export const Nav = () => {
         return e;
       }
     });
-    
+    search__inp__value.current.value="";
     List__data.changeData([new__data,List__data.data[1]]);
   }
 
